@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link href='https://fonts.googleapis.com/css?family=Nunito Sans' rel='stylesheet'>
+
+    <title>Height Calculator !</title>
+</head>
+<body>
+    
+    <h1>Height Calculator !</h1>
+    <section>
+        <form id="form">
+            <h3>Input your height</h3>
+            <input id="tinggi" name="height" placeholder="Input here" min="1" type="number" required/>
+            <select name="satuan" id="satuan">
+                <option value="cm">cm</option>
+                <option value="in">in</option>
+            </select>
+            <br/>
+            <br/>
+            <input type="button" onclick="popupbox()" value="Calculate">
+            <!-- <button class="button" type="submit" ref="#popup1">Calculate</button> -->
+            <!-- <a class="button" href="#popup1" type="submit">Calculate</a> -->
+            
+        </form>
+    </section>
+
+
+    <div id="popup1" class="overlay">
+	<div class="popup">
+		<h2>Your heigt is</h2>
+		<a class="close" href="#">&times;</a>
+		<div class="content">
+			<span id="result"></span>
+		</div>
+	</div>
+</div>
+
+</body>
+
+<footer>
+    <br/>
+    <br/>
+    <br/>
+    <center>
+        &copy; <a href="https://github.com/rifandyzv" id="twitter">rifandyzv</a> 2021
+    </center>
+</footer>
+
+<script type="text/JavaScript">
+    
+    
+   function popupbox() {
+       
+   
+        
+        var tinggi = document.getElementById('tinggi').value
+        var satuan = document.getElementById('satuan').value
+        
+        document.location.href="#popup1";
+        
+        if (tinggi == 69) {
+            document.getElementById("result").innerHTML = "nice";
+        }
+        else {
+            document.getElementById("result").innerHTML = tinggi+" "+satuan;
+        }
+        
+    }
+</script>
+</html>
